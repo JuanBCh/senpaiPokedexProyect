@@ -5,6 +5,9 @@ import "./index.css";
 
 function Main({colors}) {
   const [pokeList, setPokeList] = useState(Pokemones);
+
+  
+
   return (
     <main className="principal">
       {pokeList.map((poke) => {
