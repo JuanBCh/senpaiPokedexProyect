@@ -1,0 +1,25 @@
+ .pokemon{
+    border-radius: 25px;
+    /* FLEX */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+ }
+ .pokemon p{
+    align-self: end;
+    padding: 1em;
+ }
+ .pokemon img{
+    
+    padding: 1em;
+ }
+ .pokemon h3{
+    color: white;
+    border-radius: 0 0 21px 21px;
+    width: 100%;
+    height: 3em;
+    /* FLEX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
