@@ -1,5 +1,7 @@
 import "./App.css";
 import Principal from "./Components/Principal";
+import {Routes, Route} from "react-router-dom";
+import PokeProf from "./Components/Secondary";
 
 function App() {
   const colors = {
@@ -25,7 +27,10 @@ function App() {
 
   return (
     <div className="App">
-      <Principal colors={colors} />
+      <Routes>
+        <Route path="/" element={<Principal colors={colors} />} />
+        <Route path="/:name" element={<PokeProf colors={colors} />} />
+      </Routes>
     </div>
   );
 }

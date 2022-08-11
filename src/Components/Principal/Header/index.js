@@ -5,7 +5,7 @@ function Header(props) {
   return (
     <header>
       <img src="/Images/Pokeball.png" alt="Pokeball logo" />
-      <h1>Pokedex</h1>
+      <h1>Pokedéx</h1>
       <Filter />
       <input
         placeholder="🔍 Search"

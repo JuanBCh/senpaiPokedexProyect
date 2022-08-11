@@ -4,29 +4,47 @@ import {Pokemones} from "../../../pokemones";
 function Filter(props) {
   const [funct, setFunct] = useState(OrderByNameMas());
 
+  const images = [
+    "/Images/azflechab.png",
+    "/Images/azflechaA.png",
+    "/Images/hashtagB.png",
+    "/Images/hashtagA.png",
+  ];
+  const [imag, setImag] = useState(images[0]);
+
   const order = () => {
-    funct();
-    setFunct((f) => {
-      if (f === OrderByNameMas) {
-        return OrderByNameMenos;
+    setImag((prevSt) => {
+      if (prevSt === images[0]) {
+        return (prevSt = images[1]);
       }
-      if (f === OrderByNameMenos) {
-        return OrderByIdMas;
+      if (prevSt === images[1]) {
+        return (prevSt = images[2]);
       }
-      if (f === OrderByIdMas) {
-        return OrderByIdMenos;
+      if (prevSt === images[2]) {
+        return (prevSt = images[3]);
       }
-      if (f === OrderByIdMenos) {
-        return OrderByNameMas;
+      if (prevSt === images[3]) {
+        return (prevSt = images[0]);
       }
     });
+    // funct();
+    // setFunct((f) => {
+    //   if (f === OrderByNameMas) {
+    //     return OrderByNameMenos;
+    //   }
+    //   if (f === OrderByNameMenos) {
+    //     return OrderByIdMas;
+    //   }
+    //   if (f === OrderByIdMas) {
+    //     return OrderByIdMenos;
+    //   }
+    //   if (f === OrderByIdMenos) {
+    //     return OrderByNameMas;
+    //   }
+    // });
   };
 
-  return (
-    <button className="filter" onClick={order}>
-      Filtro
-    </button>
-  );
+  return <img className="filter" src={imag} onClick={order} />;
 }
 export default Filter;
 
