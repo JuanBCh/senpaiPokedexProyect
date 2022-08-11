@@ -13,8 +13,6 @@ function PokeProf({colors}) {
       const newSt = prevSt.filter((i) => i.name === name)[0];
       return newSt;
     });
-  }, []);
-  useEffect(() => {
     setPokeType((prevSt) => {
       const newSt = prevSt.filter((i) => i.name === name)[0];
       return newSt.types[0];
