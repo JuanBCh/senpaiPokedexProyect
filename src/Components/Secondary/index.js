@@ -20,20 +20,22 @@ function PokeProf({colors, pokemones}) {
       const newSt = prevSt.filter((i) => i.name === name)[0];
       return newSt;
     });
-    setPokeType((prevSt) => {
-      const newSt = prevSt.filter((i) => i.name === name)[0];
-      return newSt.types[0];
-    });
-  }, []);
+    // setPokeType((prevSt) => {
+    //   const newSt = prevSt.filter((i) => i.name === name)[0];
+    //   return newSt.types[0];
+    // });
+    console.log("Cargo!");
+  }, [name]);
 
   return (
-    <div className="secDiv" style={{backgroundColor: colors[pokeType]}}>
-      <Top name={poke.name} id={poke.id} />
-      <img src={poke.img} />
-      <Link to={`/${pokemones[index + 1].name}`}>
-        <img src={"/Images/new-arrow-left.png"} />
-      </Link>
-    </div>
+    <Link to={`/pokemon/${pokemones[index + 1].name}`}>{name}</Link>
+    // <div className="secDiv" style={{backgroundColor: colors[pokeType]}}>
+    //   <Top name={poke.name} id={poke.id} />
+    //   <img src={poke.img} />
+    //   <Link to={`/pokemon/${pokemones[index + 1].name}`}>
+    //     <img src={"/Images/new-arrow-left.png"} />
+    //   </Link>
+    // </div>
   );
 }
 export default PokeProf;

@@ -15,7 +15,7 @@ function Main({colors, pokemones}) {
             name={poke.name}
             img={poke.img}
             color={colors[poke.types[0]]}
-            onClick={() => navigate(`/${poke.name}`)} //aca va a ir la ruta para el pokemon en cuestion
+            onClick={() => navigate(`/pokemon/${poke.name}`)} //aca va a ir la ruta para el pokemon en cuestion
           />
         );
       })}

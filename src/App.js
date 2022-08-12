@@ -49,7 +49,7 @@ function App() {
           }
         />
         <Route
-          path="/:name"
+          path="/pokemon/:name"
           element={
             <PokeProf
               colors={colors}
