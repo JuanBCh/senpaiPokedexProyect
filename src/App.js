@@ -2,8 +2,11 @@ import "./App.css";
 import Principal from "./Components/Principal";
 import {Routes, Route} from "react-router-dom";
 import PokeProf from "./Components/Secondary";
+import {useEffect, useState} from "react";
+import {Pokemones} from "./pokemones";
 
 function App() {
+  const [pokemones, setPokemones] = useState(Pokemones);
   const colors = {
     Rock: "#B69E31",
     Ghost: "#70559B",
@@ -24,12 +27,37 @@ function App() {
     Electric: "#F9CF30",
     Dragon: "#7037FF",
   };
+  const images = [
+    "/Images/hashtagB.png",
+    "/Images/hashtagA.png",
+    "/Images/azflechab.png",
+    "/Images/azflechaA.png",
+  ];
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Principal colors={colors} />} />
-        <Route path="/:name" element={<PokeProf colors={colors} />} />
+        <Route
+          path="/"
+          element={
+            <Principal
+              colors={colors}
+              images={images}
+              setPokemones={setPokemones}
+              pokemones={pokemones}
+            />
+          }
+        />
+        <Route
+          path="/:name"
+          element={
+            <PokeProf
+              colors={colors}
+              pokemones={pokemones}
+              setPokemones={setPokemones}
+            />
+          }
+        />
       </Routes>
     </div>
   );

@@ -4,12 +4,11 @@ import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "./index.css";
 
-function Main({colors}) {
-  const [pokeList, setPokeList] = useState(Pokemones);
+function Main({colors, pokemones}) {
   const navigate = useNavigate();
   return (
     <main className="principal">
-      {pokeList.map((poke) => {
+      {pokemones.map((poke) => {
         return (
           <Pokemon
             id={poke.id}

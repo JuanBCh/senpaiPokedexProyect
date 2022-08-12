@@ -1,14 +1,21 @@
 import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate, Link} from "react-router-dom";
 import {Pokemones} from "../../pokemones";
 import Top from "./Top";
+import "./index.css";
 
-function PokeProf({colors}) {
-  const [poke, setPoke] = useState(Pokemones);
+function PokeProf({colors, pokemones}) {
+  const [poke, setPoke] = useState(pokemones);
   const [pokeType, setPokeType] = useState(Pokemones);
+  const [index, setIndex] = useState(null);
   const {name} = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    setIndex(() => {
+      const Index = pokemones.findIndex((i) => i.name === name);
+      return Index;
+    });
     setPoke((prevSt) => {
       const newSt = prevSt.filter((i) => i.name === name)[0];
       return newSt;
@@ -20,10 +27,12 @@ function PokeProf({colors}) {
   }, []);
 
   return (
-    <div style={{backgroundColor: colors[pokeType]}}>
+    <div className="secDiv" style={{backgroundColor: colors[pokeType]}}>
       <Top name={poke.name} id={poke.id} />
       <img src={poke.img} />
-      <img src={"/Images/arrow-left.svg"} />
+      <Link to={`/${pokemones[index + 1].name}`}>
+        <img src={"/Images/new-arrow-left.png"} />
+      </Link>
     </div>
   );
 }

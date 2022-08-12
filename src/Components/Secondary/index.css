@@ -1,0 +1,6 @@
+.secDiv{
+    background-image: url("../../../public/Images/Pokeball.png");
+    background-repeat: no-repeat;
+    background-position: 95% 15%;
+    background-blend-mode: difference;
+}

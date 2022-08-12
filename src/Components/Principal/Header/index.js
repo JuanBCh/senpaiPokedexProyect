@@ -6,7 +6,7 @@ function Header(props) {
     <header>
       <img src="/Images/Pokeball.png" alt="Pokeball logo" />
       <h1>Pokedéx</h1>
-      <Filter />
+      <Filter images={props.images} setPokemones={props.setPokemones} />
       <input
         placeholder="🔍 Search"
         value={props.inputValue}
