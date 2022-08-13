@@ -3,7 +3,7 @@ import "./Pokemon.css";
 function Pokemon({id, img, name, color, onClick}) {
   return (
     <div
-      className="pokemon"
+      className="pokemon pointer"
       style={{border: `2px solid ${color}`}}
       onClick={onClick}>
       <p style={{color: color}}>#{id}</p>

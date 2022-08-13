@@ -27,12 +27,40 @@ function App() {
     Electric: "#F9CF30",
     Dragon: "#7037FF",
   };
+  const colores = {
+    Roca: "#B69E31",
+    Fantasma: "#70559B",
+    Acero: "#B7B9D0",
+    Agua: "#6493EB",
+    Planta: "#74CB48",
+    Psiquico: "#FB5584",
+    Normal: "#AAA67F",
+    Lucha: "#C12239",
+    Volador: "#A891EC",
+    Veneno: "#A43E9E",
+    Tierra: "#DEC16B",
+    Insecto: "#A7B723",
+    Hielo: "#9AD6DF",
+    Siniestro: "#75574C",
+    Ada: "#E69EAC",
+    Fuego: "#F57D31",
+    Electrico: "#F9CF30",
+    Dragon: "#7037FF",
+  };
+  const [color, setColor] = useState(colors);
   const images = [
     "/Images/hashtagB.png",
     "/Images/hashtagA.png",
     "/Images/azflechab.png",
     "/Images/azflechaA.png",
   ];
+  useEffect(() => {
+    if (pokemones[0].language === "es") {
+      setColor(colores);
+    } else {
+      setColor(colors);
+    }
+  }, [<Principal />]);
 
   return (
     <div className="App">
@@ -41,7 +69,7 @@ function App() {
           path="/"
           element={
             <Principal
-              colors={colors}
+              colors={color}
               images={images}
               setPokemones={setPokemones}
               pokemones={pokemones}

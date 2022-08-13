@@ -1,16 +1,16 @@
-export const Pokemones = [
+export const PokemonesEs = [
   {
     id: "001",
     name: "Bulbasaur",
     img: "/Images/bulbasaur.png",
     gif: "/Images/bulbasaur.gif",
     shiny: "/Images/bulbasaurs.gif",
-    types: ["Grass", "Venom"],
+    types: ["Planta", "Veneno"],
     weight: 6.9,
     height: 0.7,
-    moves: ["Chlorophyll", "Overgrow"],
+    moves: ["Clorofila", "Desarrollo"],
     description:
-      "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
+      "Tiene la semilla de una planta en su espalda desde el día de su nacimiento. La semilla crece lentamente.",
     stats: {
       hp: "045",
       atk: "049",
@@ -19,7 +19,7 @@ export const Pokemones = [
       sdef: "065",
       spd: "045",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -28,12 +28,12 @@ export const Pokemones = [
     img: "/Images/charmander.png",
     gif: "/Images/charmander.gif",
     shiny: "/Images/charmanders.gif",
-    types: ["Fire"],
+    types: ["Fuego"],
     weight: 8.5,
     height: 0.6,
-    moves: ["Mega Punch", "Fire Punch"],
+    moves: ["Mega Puño", "Puño de Fuego"],
     description:
-      "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+      "Tiene preferencia por cosas calientes. Cuando llueve, se dice que sale vapor de la punta de su cola.",
     stats: {
       hp: "039",
       atk: "052",
@@ -42,7 +42,7 @@ export const Pokemones = [
       sdef: "050",
       spd: "065",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -51,12 +51,12 @@ export const Pokemones = [
     img: "/Images/squirtle.png",
     gif: "/Images/squirtle.gif",
     shiny: "/Images/squirtles.gif",
-    types: ["Water"],
+    types: ["Agua"],
     weight: 9.0,
     height: 0.5,
-    moves: ["Torrent", "Rain Dish"],
+    moves: ["Torrente", "Danza Lluvia"],
     description:
-      "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
+      "Cuando introduce su largo cuello en su caparazon, escucpe agua con gran fuerza.",
     stats: {
       hp: "044",
       atk: "048",
@@ -65,7 +65,7 @@ export const Pokemones = [
       sdef: "064",
       spd: "043",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -74,12 +74,12 @@ export const Pokemones = [
     img: "/Images/butterfree.png",
     gif: "/Images/butterfree.gif",
     shiny: "/Images/butterfrees.gif",
-    types: ["Bug", "Flying"],
+    types: ["Insecto", "Volador"],
     weight: 32.0,
     height: 1.1,
-    moves: ["Compound Eyes", "Tinted Lens"],
+    moves: ["Ojos Compuestos", "Vuelo"],
     description:
-      "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
+      "En pelea, aletea sus alas a gran velocidad para liberar polvo altamente toxico al aire.",
     stats: {
       hp: "060",
       atk: "045",
@@ -88,7 +88,7 @@ export const Pokemones = [
       sdef: "080",
       spd: "070",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -97,12 +97,12 @@ export const Pokemones = [
     img: "/Images/pikachu.png",
     gif: "/Images/pikachu.gif",
     shiny: "/Images/pikachus.gif",
-    types: ["Electric"],
+    types: ["Electrico"],
     weight: 6.0,
     height: 0.4,
-    moves: ["Mega Punch", "Pay Day"],
+    moves: ["Mega Golpe", "Impactrueno"],
     description:
-      "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+      "Puede generar mucha electricidad, tiene cachetes super suaves y elasticos.",
     stats: {
       hp: "035",
       atk: "055",
@@ -111,7 +111,7 @@ export const Pokemones = [
       sdef: "050",
       spd: "090",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -120,12 +120,12 @@ export const Pokemones = [
     img: "/Images/aron.png",
     gif: "/Images/aron.gif",
     shiny: "/Images/arons.gif",
-    types: ["Steel", "Rock"],
+    types: ["Acero", "Roca"],
     weight: 60.0,
     height: 0.4,
-    moves: ["Sturdy", "Rock-Head"],
+    moves: ["Robusto", "Cabeza Piedra"],
     description:
-      "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body.",
+      "Come menas de metales -y a veces vias de tren- para crear una carcaza de metal que proteje su cuerpo.",
     stats: {
       hp: "050",
       atk: "070",
@@ -134,7 +134,7 @@ export const Pokemones = [
       sdef: "040",
       spd: "030",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -143,12 +143,12 @@ export const Pokemones = [
     img: "/Images/mew.png",
     gif: "/Images/mew.gif",
     shiny: "/Images/mews.gif",
-    types: ["Psychic"],
+    types: ["Psiquico"],
     weight: 4.0,
     height: 0.4,
-    moves: ["Synchronize"],
+    moves: ["Sincronizar"],
     description:
-      "When viewed through a microscope, this Pokemon's short, fine, delicate hair can be seen.",
+      "En el microscopio puede observarce el pelo corto, fino y delicado de este Pokemon.",
     stats: {
       hp: "100",
       atk: "100",
@@ -157,7 +157,7 @@ export const Pokemones = [
       sdef: "100",
       spd: "100",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -169,9 +169,9 @@ export const Pokemones = [
     types: ["Normal"],
     weight: 4.0,
     height: 0.3,
-    moves: ["Limber", "Imposter"],
+    moves: ["Agilidad", "Impostor"],
     description:
-      "It can reconstitute its entire cellular structure to change into what it sees, but it returns to normal when it relaxes.",
+      "Puede reconstituir el total de su estructura celular para cambiar su apariencia, pero vuelve a la normalidad cuando se relaja.",
     stats: {
       hp: "048",
       atk: "048",
@@ -180,7 +180,7 @@ export const Pokemones = [
       sdef: "048",
       spd: "048",
     },
-    language: "en",
+    language: "es",
   },
 
   {
@@ -189,12 +189,12 @@ export const Pokemones = [
     img: "/Images/gastly.png",
     gif: "/Images/gastly.gif",
     shiny: "/Images/gastlys.gif",
-    types: ["Ghost"],
+    types: ["Fantasma"],
     weight: 0.1,
     height: 1.3,
-    moves: ["Levitate"],
+    moves: ["Levitar"],
     description:
-      "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison.",
+      "Nacido de gases, cualquiera se desmayaría si fuera engullido por su cuerpo gaseoso, que contiene veneno.",
     stats: {
       hp: "030",
       atk: "035",
@@ -203,6 +203,6 @@ export const Pokemones = [
       sdef: "035",
       spd: "080",
     },
-    language: "en",
+    language: "es",
   },
 ];

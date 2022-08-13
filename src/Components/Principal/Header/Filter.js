@@ -52,6 +52,6 @@ function Filter({images, setPokemones}) {
     });
   };
 
-  return <img className="filter" src={imag} onClick={order} />;
+  return <img className="filter pointer" src={imag} onClick={order} />;
 }
 export default Filter;
