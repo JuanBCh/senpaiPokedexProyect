@@ -39,27 +39,29 @@ function PokeProf({colors, pokemones}) {
   }, [name]);
 
   //El problema con el ultimo pokemon del array, que no se renderiza, es problema del "to" del link
-
   return (
     <div className="secDiv" style={{backgroundColor: colors[pokeType]}}>
       {console.log(pokemones)}
       {console.log(index)}
       <Top name={poke.name} id={poke.id} />
-      {index === 0 ? null : (
-        <img
-          className="pointer"
-          onClick={() => navigate(`/pokemon/${pokemones[index - 1].name}`)}
-          src={"/Images/new-arrow-left.png"}
-        />
-      )}
-      <img className="pokeMainImg" src={img} />
-      {index === 8 ? null : (
-        <img
-          className="pointer"
-          onClick={() => navigate(`/pokemon/${pokemones[index + 1].name}`)}
-          src={"/Images/new-arrow-right.png"}
-        />
-      )}
+      <div className="pokeArrows">
+        {index === 0 ? null : (
+          <img
+            className="pointer thePointer"
+            onClick={() => navigate(`/pokemon/${pokemones[index - 1].name}`)}
+            src={"/Images/new-arrow-left.png"}
+          />
+        )}
+        <img className="pokeMainImg" src={img} />
+        {index === 8 ? null : (
+          <img
+            className="pointer thePointer"
+            onClick={() => navigate(`/pokemon/${pokemones[index + 1].name}`)}
+            src={"/Images/new-arrow-right.png"}
+          />
+        )}
+      </div>
+
       <Information
         types={poke.types}
         weight={poke.weight}
@@ -68,7 +70,7 @@ function PokeProf({colors, pokemones}) {
         description={poke.description}
         stats={poke.stats}
         colors={colors}
-        color={poke.types[0]}
+        typeColor={pokeType}
       />
     </div>
   );

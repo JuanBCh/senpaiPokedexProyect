@@ -8,10 +8,9 @@ function Information({
   description,
   stats,
   colors,
-  color,
+  typeColor,
 }) {
   //types y moves son arrays. stats es un objeto
-  console.log(color);
   return (
     <div className="information">
       <div className="infoTypes">
@@ -27,17 +26,21 @@ function Information({
             );
           })}
       </div>
-      <h4 className="about" style={{color: color}}>
+      <h4 className="about" style={{color: colors[typeColor]}}>
         About
       </h4>
-      <div className="info">
-        <img src={"/Images/Weight.svg"} />
-        <h5>{weight}Kg</h5>
-        <p>Weight</p>
-        <img src={"/Images/Height.svg"} />
-        <h5>{height}m</h5>
+      <div className="info infoGrid">
+        <div className="infoMiniGrid1">
+        <img className="imgGrid" src={"/Images/Weight.svg"} />
+        <h5 className="gridContent">{weight}Kg</h5>
+        <p className="gridText">Weight</p>
+        </div>
+        <div className="infoMiniGrid2">
+        <img className="imgGrid" src={"/Images/Height.svg"} />
+        <h5 className="gridContent" >{height}m</h5>
+        <p className="gridText">Height</p>
+        </div>
         <div>
-          <p>Height</p>
           {moves &&
             moves.map((move, i) => {
               return (
@@ -50,7 +53,7 @@ function Information({
         </div>
       </div>
       <p className="description">{description}</p>
-      <h4 className="stats" style={{color: color}}>
+      <h4 className="stats" style={{color: colors[typeColor]}}>
         Base Stats
       </h4>
     </div>
