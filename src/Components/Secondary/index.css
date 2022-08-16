@@ -1,6 +1,23 @@
 .secDiv{
     background-image: url("../../../public/Images/Pokeball.png");
     background-repeat: no-repeat;
-    background-position: 95% 15%;
-    background-blend-mode: difference;
+    background-position: 95% 1%;
+    background-blend-mode: color-dodge;
+    background-size: 65%;
+    min-height: 844px;
+}
+
+.pokeMainImg{
+    width: 60%;
+    height: 60%;
+    margin-bottom: -20%;
+    margin-left: 5%;
+    margin-top: -10%;
+}
+
+.pointer{
+    width: 10%;
+    height: 10%;
+    margin-left: 5%;
+    margin-bottom: 10%;
 }

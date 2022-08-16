@@ -9,21 +9,18 @@ function Filter({images, setPokemones}) {
       return newSt;
     });
   }
-
   function OrderByNameMenos() {
     setPokemones((prevSt) => {
       const newSt = [...prevSt].sort((a, b) => b.name.localeCompare(a.name));
       return newSt;
     });
   }
-
   function OrderByIdMas() {
     setPokemones((prevSt) => {
       const newSt = [...prevSt].sort((a, b) => a.id - b.id);
       return newSt;
     });
   }
-
   function OrderByIdMenos() {
     setPokemones((prevSt) => {
       const newSt = [...prevSt].sort((a, b) => b.id - a.id);

@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {Pokemones} from "../../pokemones";
-import Top from "./Top";
 import "./index.css";
+import Top from "./Top";
+import Information from "./Information";
 
 function PokeProf({colors, pokemones}) {
   const [poke, setPoke] = useState(pokemones);
@@ -44,13 +45,31 @@ function PokeProf({colors, pokemones}) {
       {console.log(pokemones)}
       {console.log(index)}
       <Top name={poke.name} id={poke.id} />
-      <img src={img} />
-      {index === 8 ? null : (
-        <Link to={`/pokemon/${pokemones[index + 1].name}`}>
-          <img src={"/Images/new-arrow-left.png"} />
-        </Link>
+      {index === 0 ? null : (
+        <img
+          className="pointer"
+          onClick={() => navigate(`/pokemon/${pokemones[index - 1].name}`)}
+          src={"/Images/new-arrow-left.png"}
+        />
       )}
-      <p>{poke.description}</p>
+      <img className="pokeMainImg" src={img} />
+      {index === 8 ? null : (
+        <img
+          className="pointer"
+          onClick={() => navigate(`/pokemon/${pokemones[index + 1].name}`)}
+          src={"/Images/new-arrow-right.png"}
+        />
+      )}
+      <Information
+        types={poke.types}
+        weight={poke.weight}
+        height={poke.height}
+        moves={poke.moves}
+        description={poke.description}
+        stats={poke.stats}
+        colors={colors}
+        color={poke.types[0]}
+      />
     </div>
   );
 }

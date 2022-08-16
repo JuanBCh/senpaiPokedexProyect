@@ -4,9 +4,11 @@ import {Routes, Route} from "react-router-dom";
 import PokeProf from "./Components/Secondary";
 import {useEffect, useState} from "react";
 import {Pokemones} from "./pokemones";
+import {PokemonesEs} from "./pokemonesEs";
 
 function App() {
   const [pokemones, setPokemones] = useState(Pokemones);
+  const [language, setLanguage] = useState(["Pokedex", "Search"]);
   const colors = {
     Rock: "#B69E31",
     Ghost: "#70559B",
@@ -62,6 +64,15 @@ function App() {
     }
   }, [<Principal />]);
 
+  const changeLanguage = () => {
+    if (language[0] === "Pokedex") {
+      setLanguage(["Pokédex", "Buscar"]);
+      setPokemones(PokemonesEs);
+    } else {
+      setLanguage(["Pokedex", "Search"]);
+      setPokemones(Pokemones);
+    }
+  };
   return (
     <div className="App">
       <Routes>
@@ -73,6 +84,8 @@ function App() {
               images={images}
               setPokemones={setPokemones}
               pokemones={pokemones}
+              changeLanguage={changeLanguage}
+              language={language}
             />
           }
         />

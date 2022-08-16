@@ -5,7 +5,7 @@ export const Pokemones = [
     img: "/Images/bulbasaur.png",
     gif: "/Images/bulbasaur.gif",
     shiny: "/Images/bulbasaurs.gif",
-    types: ["Grass", "Venom"],
+    types: ["Grass", "Poison"],
     weight: 6.9,
     height: 0.7,
     moves: ["Chlorophyll", "Overgrow"],

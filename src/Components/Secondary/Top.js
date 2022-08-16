@@ -7,7 +7,7 @@ function Top({name, id}) {
     <nav className="topNav">
       <img
         className="pointer"
-        src={"/Images/arrow-left.svg"}
+        src={"/Images/arrow-left-blanca.png"}
         onClick={() => navigate("/")}
       />
       <h3>{name}</h3>

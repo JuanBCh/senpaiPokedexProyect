@@ -2,7 +2,14 @@ import {useState} from "react";
 import Header from "./Header";
 import Main from "./Main";
 
-function Principal({colors, images, setPokemones, pokemones}) {
+function Principal({
+  colors,
+  images,
+  setPokemones,
+  pokemones,
+  changeLanguage,
+  language,
+}) {
   const [input, setInput] = useState("");
 
   const manageInput = (e) => {
@@ -27,6 +34,8 @@ function Principal({colors, images, setPokemones, pokemones}) {
         setPokemones={setPokemones}
         inputValue={input}
         onInput={manageInput}
+        changeLanguage={changeLanguage}
+        language={language}
       />
       <Main colors={colors} pokemones={pokemones} />
     </>
