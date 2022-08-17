@@ -8,7 +8,9 @@ function Pokemon({id, img, name, color, onClick}) {
       onClick={onClick}>
       <p style={{color: color}}>#{id}</p>
       <img src={img} alt={`Image of ${name}`} />
-      <h3 className="PokemonNameIndex" style={{backgroundColor: color}}>{name}</h3>
+      <h3 className="PokemonNameIndex" style={{backgroundColor: color}}>
+        {name}
+      </h3>
     </div>
   );
 }
