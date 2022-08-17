@@ -14,18 +14,18 @@ function Principal({
 
   const manageInput = (e) => {
     setInput(e.target.value);
-    // setPokemones((prevSt) => {
-    //   const newSt = prevSt.map((pkmn) => {
-    //     const thePkmn = pkmn.name.match(input);
-    //     console.log(thePkmn);
-    //     if (thePkmn !== null) {
-    //       return thePkmn.input;
-    //     }
-    //     return "";
-    //   });
-    //   console.log(newSt);
-    //   return newSt.filter((wrd) => wrd !== "")[0];
-    // });
+    setPokemones((pkmn) => {
+      const thePkmn = pkmn.filter((pokemon) => {
+        console.log(pokemon);
+        if (input === "") {
+          console.log("Input VacIO");
+          return pokemon;
+        } else {
+          return pokemon.name.toLowerCase().includes(input);
+        }
+      });
+      return thePkmn;
+    });
   };
   return (
     <>
