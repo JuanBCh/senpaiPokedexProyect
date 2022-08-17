@@ -55,7 +55,7 @@ function PokeProf({colors, pokemones}) {
           />
         )}
         <img className="pokeMainImg" src={img} />
-        {index === 8 ? null : (
+        {index === pokemones.length - 1 ? null : (
           <img
             className="pointer thePointer"
             onClick={() => navigate(`/pokemon/${pokemones[index + 1].name}`)}

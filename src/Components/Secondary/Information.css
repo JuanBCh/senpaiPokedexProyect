@@ -1,5 +1,5 @@
 .information{
-    padding: 22.5% 0 17%;
+    padding: 22.5% 0 14%;
     margin: 5px;
     background-color: white;
     border-radius: 10px;
@@ -101,6 +101,7 @@
 }
 
 .description{
+    height: 3em;
     margin: 10% 5%;
     text-align: left;
     font-family: 'Questrial', sans-serif;

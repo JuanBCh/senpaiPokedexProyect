@@ -6,27 +6,12 @@ function Principal({
   colors,
   images,
   setPokemones,
-  pokemones,
   changeLanguage,
   language,
+  manageInput,
+  pokemones,
+  input
 }) {
-  const [input, setInput] = useState("");
-
-  const manageInput = (e) => {
-    setInput(e.target.value);
-    setPokemones((pkmn) => {
-      const thePkmn = pkmn.filter((pokemon) => {
-        console.log(pokemon);
-        if (input === "") {
-          console.log("Input VacIO");
-          return pokemon;
-        } else {
-          return pokemon.name.toLowerCase().includes(input);
-        }
-      });
-      return thePkmn;
-    });
-  };
   return (
     <>
       <Header

@@ -9,6 +9,7 @@ import {PokemonesEs} from "./pokemonesEs";
 function App() {
   const [pokemones, setPokemones] = useState(Pokemones);
   const [language, setLanguage] = useState(["Pokedex", "Search"]);
+  const [input, setInput] = useState("");
   const colors = {
     Rock: "#B69E31",
     Ghost: "#70559B",
@@ -72,6 +73,16 @@ function App() {
       setPokemones(Pokemones);
     }
   };
+  const thePkmn = pokemones.filter((pokemon) => {
+    if (input === "") {
+      return pokemon;
+    } else {
+      return pokemon.name.toLowerCase().includes(input.toLowerCase());
+    }
+  });
+  const manageInput = (e) => {
+    setInput(e.target.value);
+  };
   return (
     <div className="App">
       <Routes>
@@ -82,9 +93,11 @@ function App() {
               colors={color}
               images={images}
               setPokemones={setPokemones}
-              pokemones={pokemones}
               changeLanguage={changeLanguage}
               language={language}
+              manageInput={manageInput}
+              pokemones={thePkmn}
+              input={input}
             />
           }
         />
@@ -93,7 +106,7 @@ function App() {
           element={
             <PokeProf
               colors={colors}
-              pokemones={pokemones}
+              pokemones={thePkmn}
               setPokemones={setPokemones}
             />
           }
