@@ -1,18 +1,20 @@
 .information{
-    padding-top: 20%;
+    padding: 22.5% 0 17%;
     margin: 5px;
     background-color: white;
     border-radius: 10px;
-    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.infoTypes{
+    display: flex;
+    justify-content: center;
+}
 .infoTypes span{
-    border-radius: 20%;
-    padding: 1%;
-    margin: 3%;
+    font-size: 10px;
+    border-radius: 50px;
+    padding: 5px 15px;
     color: white;
 }
 
@@ -24,41 +26,106 @@
 .infoGrid{
     display: grid;
     margin-top: 5%;
-    height: 30%;
+    height: 40%;
     width: 80%;
-    grid-template-columns: 30% 30% 40%;
-    grid-template-rows: 100%;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 3fr;
 }
 
 .infoMiniGrid1{
     grid-column: 1;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 80% 20%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: left;
 }
 
 .infoMiniGrid2{
     grid-column: 2;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 80% 20%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     border-left: 1px solid black;
     border-right: 1px solid black;
 }
 
-.imgGrid{
-    grid-column: 1;
+.infoMiniGrid3{
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#id0{
+    font-family: 'Questrial', sans-serif;
+    font-weight: 1000;
+    font-size: 14px;
     grid-row: 1;
+    margin-left: 20%;
+    width: 150%;
+}
+
+#id1{
+    font-family: 'Questrial', sans-serif;
+    font-weight: 1000;
+    font-size: 14px;
+    grid-row: 2;
     margin-left: 20%;
 }
 
+.imgGrid{
+    padding-top: 20%;
+    margin-bottom: -20%;
+    grid-column: 1;
+    grid-row: 1 / 2;
+    height: 150%;
+    margin-left: 50%;
+}
+
 .gridContent{
+    padding-top: 20%;
+    margin-bottom: -20%;
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 1 / 2;
     text-align: left;
+    text-align: center;
+    margin-right: 50%;
 }
 
 .gridText{
-    grid-column: 1 / 2;
-    grid-row: 2;
+    grid-column: 1 / 3;
+    grid-row: 3;
+    text-align: center;
+    color: grey;
+    font-family: 'Questrial', serif ;
+}
+
+.description{
+    margin: 10% 5%;
+    text-align: left;
+    font-family: 'Questrial', sans-serif;
+}
+
+.statDiv{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+.statDiv p{
+    width: 2em;
+    padding-left: 2%;
+    margin-right: 5%;
+    border-left: 1px solid grey;
+}
+
+.statDiv label{
+    margin-right: 5%;
+}
+
+.progressBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
 }

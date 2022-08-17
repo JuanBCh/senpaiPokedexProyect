@@ -62,8 +62,7 @@ function App() {
     } else {
       setColor(colors);
     }
-  }, [<Principal />]);
-
+  }, [language]);
   const changeLanguage = () => {
     if (language[0] === "Pokedex") {
       setLanguage(["Pokédex", "Buscar"]);

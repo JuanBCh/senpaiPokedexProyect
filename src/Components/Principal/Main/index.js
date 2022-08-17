@@ -9,7 +9,6 @@ function Main({colors, pokemones}) {
   return (
     <main className="principal">
       {pokemones.map((poke) => {
-        console.log(poke.types);
         return (
           <Pokemon
             id={poke.id}
