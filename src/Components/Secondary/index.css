@@ -6,26 +6,21 @@
     background-size: 65%;
     min-height: 844px;
 }
+
 .pokeArrows{
     height: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    /* FLEX */
+        display: flex;
+        justify-content: center;
+        align-items: end;
 }
 
 .pokeMainImg{
-    width: 60%;
-    /* height: 60%; */
-    /* margin-bottom: -20%; */
-    /* margin-left: auto;
-    margin-right: auto; */
+    width: 75%;
     margin: 0 auto -20%;
 }
 
 .thePointer{
     width: 10%;
-    /* height: 30%; */
-    margin-left: 5px;
-    margin-right: 5px;
-    /* margin-bottom: 10%; */
+    margin: 0 5px;
 }

@@ -50,7 +50,7 @@ function Information({
                 </p>
               );
             })}
-          <p className="gridText">Moves</p>
+          <p className="gridText">Move</p>
         </div>
       </div>
       <p className="description">{description}</p>
@@ -65,7 +65,7 @@ function Information({
         <ProgressBar
           className="progressBar"
           completed={stats.hp}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -81,12 +81,12 @@ function Information({
         <ProgressBar
           className="progressBar"
           completed={stats.atk}
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
           height="5px"
           labelSize="0"
-          maxCompleted="250"
         />
       </div>
       <div className="statDiv">
@@ -97,7 +97,7 @@ function Information({
         <ProgressBar
           className="progressBar"
           completed={stats.def}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -113,7 +113,7 @@ function Information({
         <ProgressBar
           className="progressBar"
           completed={stats.satk}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -129,7 +129,7 @@ function Information({
         <ProgressBar
           className="progressBar"
           completed={stats.sdef}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -145,7 +145,7 @@ function Information({
         <ProgressBar
           className="progressBar"
           completed={stats.spd}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"

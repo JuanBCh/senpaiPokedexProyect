@@ -3,13 +3,14 @@ import Principal from "./Components/Principal";
 import {Routes, Route} from "react-router-dom";
 import PokeProf from "./Components/Secondary";
 import {useEffect, useState} from "react";
-import Pokemones from "./pokemones";
+import Err404 from "./Components/Err404";
 
 function App() {
   const [pokemones, setPokemones] = useState([]);
   const [input, setInput] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
-  const [prr, setPrr] = useState("");
+  const [gen, setGen] = useState(0);
+
   const colors = {
     rock: "#B69E31",
     ghost: "#70559B",
@@ -36,32 +37,26 @@ function App() {
     "/Images/azflechab.png",
     "/Images/azflechaA.png",
   ];
-  // console.log(Pokemones());
-  // useEffect(() => {
-  //   // request http a la api de mozos http://localhost:8088/mozos
-  //   fetch("http://localhost:8088/pokemones")
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setPokemones(result);
-  //     });
-  // }, []);
-  // useEffect(() => {
-  //   if (pokemones !== []) {
-  //     setIsLoaded(true);
-  //     setPokemones(Pokemones());
-  //   } else {
-  //     setPrr("");
-  //   }
-  // }, [prr]);
-  const [pokeList, setPokeList] = useState([]);
+
+  const generations = [
+    "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0",
+    "https://pokeapi.co/api/v2/pokemon?limit=100&offset=151",
+    "https://pokeapi.co/api/v2/pokemon?limit=135&offset=251",
+    "https://pokeapi.co/api/v2/pokemon?limit=107&offset=386",
+    "https://pokeapi.co/api/v2/pokemon?limit=107&offset=494",
+    "https://pokeapi.co/api/v2/pokemon?limit=156&offset=649",
+    "https://pokeapi.co/api/v2/pokemon?limit=72&offset=721",
+    "https://pokeapi.co/api/v2/pokemon?limit=88&offset=809",
+    "https://pokeapi.co/api/v2/pokemon?limit=89&offset=898",
+  ];
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=150&offset=151")
+    setIsLoaded(false);
+    fetch(generations[gen])
       .then((res) => res.json())
       .then((result) => {
-        setPokeList(result.results);
         obtenerPokemones(result.results);
       });
-  }, []);
+  }, [gen]);
 
   async function obtenerPokemones(lista) {
     const Promesas = lista.map((result) => {
@@ -70,7 +65,7 @@ function App() {
         .then((resultados) => {
           return {
             id: resultados.id,
-            name: resultados.name,
+            name: resultados.name.toUpperCase(),
             img: resultados.sprites.front_default,
             gif: resultados.sprites.front_default,
             shiny: resultados.sprites.front_shiny,
@@ -96,7 +91,6 @@ function App() {
     setIsLoaded(true);
   }
 
-  console.log("pokemones: ", pokemones);
   const thePkmn = pokemones.filter((pokemon) => {
     if (input === "") {
       return pokemon;
@@ -104,10 +98,16 @@ function App() {
       return pokemon.name.toLowerCase().includes(input.toLowerCase());
     }
   });
-  console.log("pokemones filtrados", thePkmn);
   const manageInput = (e) => {
     setInput(e.target.value);
   };
+
+  const manageGen = () => {
+    if (gen === generations.length - 1) {
+      setGen(0);
+    } else setGen(gen + 1);
+  };
+
   return (
     <div className="App">
       <Routes>
@@ -122,6 +122,7 @@ function App() {
               pokemones={thePkmn}
               input={input}
               isLoaded={isLoaded}
+              onClick={manageGen}
             />
           }
         />
@@ -135,6 +136,7 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<Err404 />} />
       </Routes>
     </div>
   );

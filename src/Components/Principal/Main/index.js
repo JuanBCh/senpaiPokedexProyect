@@ -6,9 +6,10 @@ function Main({colors, pokemones}) {
   const navigate = useNavigate();
   return (
     <main className="principal">
-      {pokemones.map((poke) => {
+      {pokemones.map((poke, i) => {
         return (
           <Pokemon
+            key={i}
             id={poke.id}
             name={poke.name}
             img={poke.img}

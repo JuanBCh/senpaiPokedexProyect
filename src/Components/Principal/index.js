@@ -9,6 +9,7 @@ function Principal({
   pokemones,
   input,
   isLoaded,
+  onClick,
 }) {
   return (
     <>
@@ -17,6 +18,7 @@ function Principal({
         setPokemones={setPokemones}
         inputValue={input}
         onInput={manageInput}
+        onClick={onClick}
       />
       {!isLoaded ? (
         <p>Cargando</p>

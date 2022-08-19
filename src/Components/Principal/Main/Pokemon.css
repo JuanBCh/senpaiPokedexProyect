@@ -1,27 +1,30 @@
- .pokemon{
+.pokemon{
    width: 31%;
    margin: 1%;
    background-color: rgb(255, 255, 255);
    padding-bottom: -20px;
    border-radius: 15px;
-    /* FLEX */
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
- }
- .pokemon p{
-  font-size: 13px;
+   /* FLEX */
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+}
+
+.pokemon p{
+   font-size: 13px;
    text-shadow: 1px 1px 0px rgb(108, 108, 108);
    margin-bottom: 10px;
    height: 1em;
    align-self: end;
    padding: 5px 1em 0;
- }
- .pokemon img{
+}
+
+.pokemon img{
+   width: 100%;
    padding: 0 1em;
-    height: 5em;
- }
- .pokemon h3{
+}
+
+.pokemon h3{
    font-size: 0.9em;
    margin-bottom: -2px;
    color: white;
@@ -29,8 +32,8 @@
    border-radius: 0 0 11px 11px;
    width: 101%;
    height: 25%;
-    /* FLEX */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      /* FLEX */
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
