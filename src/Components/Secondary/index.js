@@ -7,8 +7,8 @@ import Information from "./Information";
 
 function PokeProf({colors, pokemones}) {
   const [poke, setPoke] = useState(pokemones);
-  const [pokeType, setPokeType] = useState(Pokemones);
-  const [pokeStats, setPokeStats] = useState(Pokemones);
+  const [pokeType, setPokeType] = useState(pokemones);
+  const [pokeStats, setPokeStats] = useState(pokemones);
   const [index, setIndex] = useState(null);
   const [img, setImg] = useState(null);
   const {name} = useParams();
@@ -31,12 +31,12 @@ function PokeProf({colors, pokemones}) {
       return newSt;
     });
     setPokeType((prevSt) => {
-      prevSt = Pokemones;
+      prevSt = pokemones;
       const newSt = prevSt.filter((i) => i.name === name)[0];
       return newSt.types[0];
     });
     setPokeStats((prevSt) => {
-      prevSt = Pokemones;
+      prevSt = pokemones;
       const newSt = prevSt.filter((i) => i.name === name)[0];
       return newSt.stats;
     });

@@ -1,6 +1,4 @@
 import Pokemon from "./Pokemon";
-import {Pokemones} from "../../../pokemones";
-import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "./index.css";
 
