@@ -16,7 +16,7 @@ function PokeProf({colors, pokemones}) {
 
   useEffect(() => {
     document.title = `${name}`;
-    document.icon = `/Images/${name}.png`;
+    // document.icon = `/Images/${name}.png`;
     setIndex(() => {
       const Index = pokemones.findIndex((i) => i.name === name);
       return Index;
