@@ -3,11 +3,13 @@
     display: flex;
     justify-content: space-between;
 }
+
 .topNav h3{
     font-size: 1.6em;
     margin-left: 1em;
     color: white;
 }
+
 .topNav h4{
     align-self: center;
     font-size: 0.8em;
