@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import Header from "./Header";
 import Main from "./Main";
 
@@ -11,6 +12,10 @@ function Principal({
   isLoaded,
   onClick,
 }) {
+  useEffect(() => {
+    document.title = "Pokedex";
+  });
+
   return (
     <>
       <Header

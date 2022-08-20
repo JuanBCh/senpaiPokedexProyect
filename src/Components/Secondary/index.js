@@ -15,6 +15,7 @@ function PokeProf({colors, pokemones}) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = `${name}`;
     setIndex(() => {
       const Index = pokemones.findIndex((i) => i.name === name);
       return Index;
