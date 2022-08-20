@@ -1,5 +1,5 @@
 .information{
-    padding: 22.5% 0 14%;
+    padding: 22.5% 0 10%;
     margin: 5px;
     background-color: white;
     border-radius: 10px;
@@ -49,6 +49,15 @@
     border-right: 1px solid black;
 }
 
+.imgGrid{
+    padding-top: 20%;
+    margin-bottom: -20%;
+    grid-column: 1;
+    grid-row: 1 / 2;
+    height: 150%;
+    margin-left: 50%;
+}
+
 .infoMiniGrid3{
     grid-column: 3;
     display: grid;
@@ -71,15 +80,6 @@
     font-size: 14px;
     grid-row: 2;
     margin-left: 20%;
-}
-
-.imgGrid{
-    padding-top: 20%;
-    margin-bottom: -20%;
-    grid-column: 1;
-    grid-row: 1 / 2;
-    height: 150%;
-    margin-left: 50%;
 }
 
 .gridContent{
@@ -107,6 +107,10 @@
     font-family: 'Questrial', sans-serif;
 }
 
+.stats{
+    margin-bottom: 4%;
+}
+
 .statDiv{
     width: 90%;
     display: flex;
@@ -123,6 +127,7 @@
 .statDiv label{
     margin-right: 5%;
 }
+
 
 .progressBar{
     display: flex;

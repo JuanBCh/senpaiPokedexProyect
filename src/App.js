@@ -5,6 +5,7 @@ import PokeProf from "./Components/Secondary";
 import {useEffect, useState} from "react";
 import {Pokemones} from "./pokemones";
 import {PokemonesEs} from "./pokemonesEs";
+import Err404 from "./Components/Err404";
 
 function App() {
   const [pokemones, setPokemones] = useState(Pokemones);
@@ -111,6 +112,7 @@ function App() {
             />
           }
         />
+        <Route path="*" element={<Err404 />} />
       </Routes>
     </div>
   );
