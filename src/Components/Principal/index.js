@@ -10,7 +10,9 @@ function Principal({
   language,
   manageInput,
   pokemones,
-  input
+  input,
+  imag,
+  setImag,
 }) {
   return (
     <>
@@ -21,6 +23,8 @@ function Principal({
         onInput={manageInput}
         changeLanguage={changeLanguage}
         language={language}
+        imag={imag}
+        setImag={setImag}
       />
       <Main colors={colors} pokemones={pokemones} />
     </>

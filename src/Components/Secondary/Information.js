@@ -58,14 +58,14 @@ function Information({
         Base Stats
       </h4>
       <div className="statDiv">
-        <label style={{color: colors[typeColor]}} for="stathp">
+        <label style={{color: colors[typeColor]}} htmlFor="stathp">
           HP
         </label>
         <p>{stats.hp}</p>
         <ProgressBar
           className="progressBar"
           completed={stats.hp}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -74,30 +74,30 @@ function Information({
         />
       </div>
       <div className="statDiv">
-        <label style={{color: colors[typeColor]}} for="statatk">
+        <label style={{color: colors[typeColor]}} htmlFor="statatk">
           ATK
         </label>
         <p>{stats.atk}</p>
         <ProgressBar
           className="progressBar"
           completed={stats.atk}
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
           height="5px"
           labelSize="0"
-          maxCompleted="250"
         />
       </div>
       <div className="statDiv">
-        <label style={{color: colors[typeColor]}} for="statdef">
+        <label style={{color: colors[typeColor]}} htmlFor="statdef">
           DEF
         </label>
         <p>{stats.def}</p>
         <ProgressBar
           className="progressBar"
           completed={stats.def}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -106,14 +106,14 @@ function Information({
         />
       </div>
       <div className="statDiv">
-        <label style={{color: colors[typeColor]}} for="statsatk">
+        <label style={{color: colors[typeColor]}} htmlFor="statsatk">
           SATK
         </label>
         <p>{stats.satk}</p>
         <ProgressBar
           className="progressBar"
           completed={stats.satk}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -122,14 +122,14 @@ function Information({
         />
       </div>
       <div className="statDiv">
-        <label style={{color: colors[typeColor]}} for="statsdef">
+        <label style={{color: colors[typeColor]}} htmlFor="statsdef">
           SDEF
         </label>
         <p>{stats.sdef}</p>
         <ProgressBar
           className="progressBar"
           completed={stats.sdef}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -138,14 +138,14 @@ function Information({
         />
       </div>
       <div className="statDiv">
-        <label style={{color: colors[typeColor]}} for="statspd">
+        <label style={{color: colors[typeColor]}} htmlFor="statspd">
           SPD
         </label>
         <p>{stats.spd}</p>
         <ProgressBar
           className="progressBar"
           completed={stats.spd}
-          maxCompleted="250"
+          maxCompleted={250}
           bgColor={colors[typeColor]}
           baseBgColor={`${colors[typeColor]}55`}
           width="200px"
@@ -156,4 +156,5 @@ function Information({
     </div>
   );
 }
+
 export default Information;

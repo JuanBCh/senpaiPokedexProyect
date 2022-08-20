@@ -11,6 +11,7 @@ function App() {
   const [pokemones, setPokemones] = useState(Pokemones);
   const [language, setLanguage] = useState(["Pokedex", "Search"]);
   const [input, setInput] = useState("");
+
   const colors = {
     Rock: "#B69E31",
     Ghost: "#70559B",
@@ -58,6 +59,8 @@ function App() {
     "/Images/azflechab.png",
     "/Images/azflechaA.png",
   ];
+  const [imag, setImag] = useState(images[0]);
+
   useEffect(() => {
     if (pokemones[0].language === "es") {
       setColor(colores);
@@ -65,6 +68,7 @@ function App() {
       setColor(colors);
     }
   }, [language]);
+
   const changeLanguage = () => {
     if (language[0] === "Pokedex") {
       setLanguage(["Pokédex", "Buscar"]);
@@ -74,6 +78,7 @@ function App() {
       setPokemones(Pokemones);
     }
   };
+
   const thePkmn = pokemones.filter((pokemon) => {
     if (input === "") {
       return pokemon;
@@ -81,9 +86,11 @@ function App() {
       return pokemon.name.toLowerCase().includes(input.toLowerCase());
     }
   });
+
   const manageInput = (e) => {
     setInput(e.target.value);
   };
+
   return (
     <div className="App">
       <Routes>
@@ -99,6 +106,8 @@ function App() {
               manageInput={manageInput}
               pokemones={thePkmn}
               input={input}
+              imag={imag}
+              setImag={setImag}
             />
           }
         />

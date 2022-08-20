@@ -1,8 +1,6 @@
 import {useState} from "react";
 
-function Filter({images, setPokemones}) {
-  const [imag, setImag] = useState(images[0]);
-
+function Filter({images, setPokemones, imag, setImag}) {
   function OrderByNameMas() {
     setPokemones((prevSt) => {
       const newSt = [...prevSt].sort((a, b) => a.name.localeCompare(b.name));

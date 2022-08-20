@@ -9,7 +9,12 @@ function Header(props) {
       <h1 onClick={props.changeLanguage} className="pointer">
         {props.language[0]}
       </h1>
-      <Filter images={props.images} setPokemones={props.setPokemones} />
+      <Filter
+        images={props.images}
+        setPokemones={props.setPokemones}
+        imag={props.imag}
+        setImag={props.setImag}
+      />
       <input
         placeholder={`🔍 ${props.language[1]}`}
         value={props.inputValue}

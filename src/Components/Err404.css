@@ -6,3 +6,10 @@
         justify-content: center;
         align-items: center;
 }
+
+.err404 a{
+    color: rgb(0, 0, 255);
+}
+.err404 a:hover{
+    text-decoration: underline;    
+}
